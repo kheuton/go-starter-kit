@@ -1,9 +1,9 @@
 import React, { Component } from 'react';
 import Helmet from 'react-helmet';
 import { Link } from 'react-router';
-import { example, p, link } from './styles';
+import { example, p, link } from '../homepage/styles';
 
-export default class Homepage extends Component {
+export default class SheetsPage extends Component {
   /*eslint-disable */
   static onEnter({store, nextState, replaceState, callback}) {
     // Load here any data.
@@ -14,23 +14,16 @@ export default class Homepage extends Component {
   render() {
     return <div>
       <Helmet
-        title='Home page'
+        title="Here's all your sheets"
         meta={[
           {
             property: 'og:title',
-            content: 'Golang Isomorphic React/Hot Reloadable/Redux/Css-Modules Starter Kit'
+            content: 'Real life spreadsheets'
           }
         ]} />
-      <h1 className={example}>
-        Hot Reloadable <br />
-        Golang + React + Redux + Css-Modules
-        <br />Isomorphic Starter Kit</h1>
       <br />
       <p className={p}>
         Please take a look at <Link className={link} to='/docs'>usage</Link> page.
-      </p>
-      <p className={p}>
-        Please take a look at some <Link className={link} to='/sheets'>spreadsheets</Link>.
       </p>
     </div>;
   }
