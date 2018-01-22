@@ -8,3 +8,4 @@
 .pid
 .DS_Store
 google-generated-creds.json
+creds.json
